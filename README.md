@@ -33,8 +33,7 @@ qt项目：悬浮的动态阴影按钮
 由于中心的按钮FloatingInsideButton继承的是QT普通的QPushbutton，有以下问题  
 1.中心文字过长时，需要缩略显示并显示tooltip，普通QPushbutton不带该功能  
 
-#### 以下部分涉及个人使用所以不做开源，仅提供思路：
-1.建议使用者继承QPushbutton自己重写setText，和tooltip等相关刷新，让FloatingInsideButton继承该类，可实现更精致定制化的UI和tooltip显示
+#### 建议使用者QPushbutton重写setText，和tooltip等相关刷新，让FloatingInsideButton继承该类，可实现更精致定制化的UI和tooltip显示
 
 
 ### LICENSE
