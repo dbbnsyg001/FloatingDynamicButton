@@ -19,15 +19,11 @@ void FloatingInsideButton::SetText(const QString& text)
 
 void FloatingInsideButton::SetImage(const QString& image, const QString& tip, bool hover)
 {
-    QString imageStyle = QString("QPushButton{background-image: url(%1); \
-									background-position:center; \
-									background-repeat:no-repeat;}").arg(image);
+    QString imageStyle = QString("QPushButton{border-image: url(%1);}").arg(image);
 
     if (hover)
     {
-        imageStyle = QString("QPushButton::hover{background-image: url(%1); \
-								background-position:center; \
-								background-repeat:no-repeat;}") .arg(image);
+        imageStyle = QString("QPushButton::hover{border-image: url(%1); }") .arg(image);
     }
 
     this->setStyleSheet(imageStyle);
